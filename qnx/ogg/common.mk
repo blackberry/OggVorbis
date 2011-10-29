@@ -6,10 +6,10 @@ include $(QCONFIG)
 NAME=ogg
 
 #===== EXTRA_INCVPATH - a space-separated list of directories to search for include files.
-EXTRA_INCVPATH+=$(PRODUCT_ROOT)/include
+EXTRA_INCVPATH+=$(PRODUCT_ROOT)/../ogg/include
 
 #===== EXTRA_SRCVPATH - a space-separated list of directories to search for source files.
-EXTRA_SRCVPATH+=$(PRODUCT_ROOT)/src
+EXTRA_SRCVPATH+=$(PRODUCT_ROOT)/../ogg/src
 
 INSTALLDIR=$(firstword $(INSTALLDIR_$(OS)) usr/lib)
 	
