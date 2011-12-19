@@ -3,13 +3,18 @@ QCONFIG=qconfig.mk
 endif
 include $(QCONFIG)
 
-NAME=ogg
+NAME=vorbis
 
 #===== EXTRA_INCVPATH - a space-separated list of directories to search for include files.
-EXTRA_INCVPATH+=$(PRODUCT_ROOT)/../ogg/include
+EXTRA_INCVPATH+=$(PRODUCT_ROOT)/../include \
+    $(PRODUCT_ROOT)/../lib \
+    $(PRODUCT_ROOT)/../lib/modes \
+    $(PRODUCT_ROOT)/../../ogg/include
 
 #===== EXTRA_SRCVPATH - a space-separated list of directories to search for source files.
-EXTRA_SRCVPATH+=$(PRODUCT_ROOT)/../ogg/src
+EXTRA_SRCVPATH+=$(PRODUCT_ROOT)/../lib
+
+EXCLUDE_OBJS=vorbisfile.o vorbisenc.o barkmel.o tone.o
 
 INSTALLDIR=$(firstword $(INSTALLDIR_$(OS)) usr/lib)
 	
