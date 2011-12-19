@@ -132,7 +132,7 @@ simply add the shared libraries you need to your project (OggLib and
 VorbisLib at least) and #include "ogg/ogg.h" and "vorbis/codec.h"
 wherever you need to access Ogg and Vorbis functionality.
 
-BUILDING FOR BlackBerry QNX FROM WINDOWS:
+BUILDING FOR BlackBerry QNX FOR WINDOWS (using Makefile):
 
 To build for the QNX platform on Windows, run cmd.exe and execute the following commands:
 > cd [bbndk]				where [bbndk] is where the QNX NDK was installed (i.e. C:\bbndk)
@@ -161,4 +161,23 @@ Following this, the relevant binaries should reside in the following subdirector
         [vorbis]/qnx/vorbisfile/arm/a.le.v7.g   (ARM debug)
         [vorbis]/qnx/vorbisfile/x86/a           (x86 simulator release)
         [vorbis]/qnx/vorbisfile/x86/a.g         (x86 simulator debug)
+        
+BUILDING FOR BlackBerry QNX (using Momentics IDE):
+
+Alternatively, you can also import the vorbis Momentics IDE project 
+by "Import"->"Existing Projects into Workspace" and selecting the [vorbis] "Root Directory".
+This will build all the ogg and vorbis code into single library called libvorbis. 
+Depending on your selcted configuration, the output library will be built into one of the following:
+
+    libvorbis: 
+        [vorbis]/Device-Debug/libvorbis.a
+        [vorbis]/Device-Release/libvorbis.a
+        [vorbis]/Device-Coverage/libvorbis.a
+        [vorbis]/Device-Profile/libvorbis.a
+        [vorbis]/Simulator/libvorbis.a
+        [vorbis]/Simulator-Coverage/libvorbis.a
+        [vorbis]/Simulator-Profile/libvorbis.a
+
+
+
 
